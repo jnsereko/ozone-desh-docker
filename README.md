@@ -42,6 +42,9 @@ Ozone FOSS requires you to log into each component separately:
 | SENAITE           | http://localhost:8081/senaite | admin    | password |
 | Odoo              | http://localhost:8069         | admin    | admin    |
 | Superset          | http://localhost:8088         | admin    | password |
+| OpenHIM           | http://localhost:9000/        |root@openhim.org | admin|
+| OpenELIS          | https://localhost:8443/OpenELIS-Global/  | admin    | adminADMIN! |
+
 
 
 :bulb: **Did you know?** Ozone Pro comes with single sign-on (SSO) and all its integration layer is secured with OAuth2.
