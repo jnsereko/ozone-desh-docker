@@ -13,8 +13,8 @@ This Docker Compose project makes it easy to start and run an Ozone FOSS server 
 Type in the following in a terminal:
 
 ```bash
-git clone https://github.com/ozone-his/ozone-docker
-cd ozone-docker
+git clone https://github.com/jnsereko/ozone-desh-docker
+cd ozone-desh-docker
 ./start-demo.sh
 ```
 
