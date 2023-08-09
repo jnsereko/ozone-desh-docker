@@ -13,8 +13,8 @@ This Docker Compose project makes it easy to start and run an Ozone FOSS server 
 Type in the following in a terminal:
 
 ```bash
-git clone https://github.com/ozone-his/ozone-docker
-cd ozone-docker
+git clone https://github.com/jnsereko/ozone-desh-docker
+cd ozone-desh-docker
 ./start-demo.sh
 ```
 
@@ -32,6 +32,19 @@ It may take some time to download and setup Ozone for the first time, so hang ti
 
 When ready Gitpod will launch the tab for OpenMRS 3.
 
+## 2. Using locally hardcoded proxy reverse domains
+Ozone FOSS requires you to log into each component separately:
+
+| HIS Component     | URL                            | Username | Password |
+|-------------------|--------------------------------|----------|----------|
+| OpenMRS 3         | http://clinicplusurgentcare.com.localhost/openmrs/spa  | admin    | Admin123 |
+| OpenMRS Legacy UI | http://clinicplusurgentcare.com.localhost/openmrs      | admin    | Admin123 |
+| SENAITE           | http://senaite.clinicplusurgentcare.com.localhost/ | admin    | password |
+| Odoo              | http://odoo.clinicplusurgentcare.com.localhost/        | admin    | admin    |
+| Superset          | http://superset.clinicplusurgentcare.com.localhost        | admin    | password |
+| OpenHIM           | http://openhim.clinicplusurgentcare.com.localhost/       |root@openhim.org | admin|
+| OpenELIS          | https://localhost:8443/OpenELIS-Global/  | admin    | adminADMIN! |
+
 ## 2. Browse Ozone
 Ozone FOSS requires you to log into each component separately:
 
@@ -42,6 +55,9 @@ Ozone FOSS requires you to log into each component separately:
 | SENAITE           | http://localhost:8081/senaite | admin    | password |
 | Odoo              | http://localhost:8069         | admin    | admin    |
 | Superset          | http://localhost:8088         | admin    | password |
+| OpenHIM           | http://localhost:9000/        |root@openhim.org | admin|
+| OpenELIS          | https://localhost:8443/OpenELIS-Global/  | admin    | adminADMIN! |
+
 
 
 :bulb: **Did you know?** Ozone Pro comes with single sign-on (SSO) and all its integration layer is secured with OAuth2.
