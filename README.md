@@ -32,6 +32,19 @@ It may take some time to download and setup Ozone for the first time, so hang ti
 
 When ready Gitpod will launch the tab for OpenMRS 3.
 
+## 2. Using locally hardcoded proxy reverse domains
+Ozone FOSS requires you to log into each component separately:
+
+| HIS Component     | URL                            | Username | Password |
+|-------------------|--------------------------------|----------|----------|
+| OpenMRS 3         | http://clinicplusurgentcare.com.localhost/openmrs/spa  | admin    | Admin123 |
+| OpenMRS Legacy UI | http://clinicplusurgentcare.com.localhost/openmrs      | admin    | Admin123 |
+| SENAITE           | http://senaite.clinicplusurgentcare.com.localhost/ | admin    | password |
+| Odoo              | http://odoo.clinicplusurgentcare.com.localhost/        | admin    | admin    |
+| Superset          | http://superset.clinicplusurgentcare.com.localhost        | admin    | password |
+| OpenHIM           | http://openhim.clinicplusurgentcare.com.localhost/       |root@openhim.org | admin|
+| OpenELIS          | https://localhost:8443/OpenELIS-Global/  | admin    | adminADMIN! |
+
 ## 2. Browse Ozone
 Ozone FOSS requires you to log into each component separately:
 
