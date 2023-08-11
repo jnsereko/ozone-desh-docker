@@ -42,7 +42,7 @@ if [[ $INSTALLED_DOCKER_VERSION =~ $MINIMUM_REQUIRED_DOCKER_VERSION_REGEX ]]; th
         export PROXY_TLS="-DgitPodEnvironment"
     fi
    docker network create web
-   docker compose -f docker-compose.yml -f docker-compose-proxy.yml up -d --build
+   docker compose -f docker-compose.yml -f docker-compose-proxy.yml -f docker-compose-traefik.yml up -d --build
 else
     echo "Docker versions < 20.10.13 are not supported"
 fi

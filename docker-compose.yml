@@ -465,6 +465,14 @@ services:
           - openhim-console
     ports:
       - "9000:80"
+    labels:
+      traefik.enable: true
+      # https
+      traefik.http.routers.openhim-console.rule: Host(`${OPENHIM_HOSTNAME}`) 
+      traefik.http.routers.openhim-console.entrypoints: websecure
+      traefik.http.routers.openhim-console.service: openhim-console
+      traefik.http.routers.openhim-console.middlewares: gzip,sslheader,limit
+      traefik.http.services.openhim-console.loadbalancer.server.port: 80
     healthcheck:
      test: "curl -sS http://openhim-console || exit 1"
      interval: 30s
@@ -520,6 +528,15 @@ services:
     ports:
         - "8082:8080"
         - "8443:8443"
+    labels:
+      traefik.enable: true
+      # https
+      traefik.http.routers.oe.openelis.org.rule: Host(`${OPENELIS_HOSTNAME}`) && (PathPrefix(`/OpenELIS-Global/`) 
+      traefik.http.routers.oe.openelis.org.entrypoints: websecure
+      traefik.http.routers.oe.openelis.org.service: oe.openelis.org
+      traefik.http.routers.oe.openelis.org.middlewares: gzip,sslheader,limit
+      traefik.http.services.oe.openelis.org.loadbalancer.server.port: 8443
+
     restart: always
     networks:
       ozone:
@@ -600,9 +617,5 @@ volumes:
   odoo-checksums: ~
 networks:
   ozone:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.20.1.0/24  
   web:
     external: true
