@@ -4,7 +4,7 @@ on:
   push:
 jobs:
   build-and-publish:
-    uses: ./.github/actions/desh-build-workflow.yml
+    uses: ./.github/workflows/actions/desh-build-workflow.yml
     with:
       webhook-url: https://openmrs-cd.mekomsolutions.net/generic-webhook-trigger/invoke
     secrets:
